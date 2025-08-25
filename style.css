@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background: #fffdf6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+}
+.logo span { color: #e63946; }
+nav ul { display: flex; gap: 1.5rem; list-style: none; }
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover { color: #e63946; }
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background: #e63946;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cta-btn:hover { background: #b82e38; transform: scale(1.05); }
+
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Authors */
+.authors {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.author-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.author-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.author-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.author-card:hover { transform: translateY(-5px); }
+
+/* Books */
+.books {
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+.book-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.book-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.book-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.book-card:hover { transform: scale(1.05); }
+
+/* Search Box */
+#searchInput {
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 2rem;
+  width: 250px;
+  max-width: 90%;
+  outline: none;
+}
+#searchInput:focus {
+  border-color: #e63946;
+  box-shadow: 0 0 5px rgba(230,57,70,0.5);
+}
+
+/* Poems */
+.poems {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #fff3e6;
+}
+blockquote {
+  font-style: italic;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  font-size: 1.2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Quotes Section */
+.quotes {
+  background: #fff3e0;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #4e342e;
+}
+
+/* Offers Section */
+.offers {
+  padding: 50px 20px;
+  background: #f9f5f0;
+  text-align: center;
+}
+
+.offers h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.offers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+}
+
+.offer-card h3 {
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right:0; bottom:0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+.close:hover { color: #e63946; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
